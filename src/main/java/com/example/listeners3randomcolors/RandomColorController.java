@@ -16,6 +16,8 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 public class RandomColorController implements Initializable {
+    private RGBMaker rgbMaker = new RGBMaker();
+
     private final SimpleDoubleProperty simpleDoubleProperty = new SimpleDoubleProperty();
     private final Random random = new Random();
     private final SimpleBooleanProperty simpleBooleanProperty = new SimpleBooleanProperty();
