@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90ea897c-6b88-465f-ba58-72b0667c8303" name="Changes" comment="added fade out">
+    <list default="true" id="90ea897c-6b88-465f-ba58-72b0667c8303" name="Changes" comment="added fade out in red">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/listeners3randomcolors/randomColors.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/listeners3randomcolors/randomColors.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674588034091</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added fade out in red">
+      <created>1674588725589</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674588725589</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,14 +157,15 @@
     <MESSAGE value="assigns a simpleBoolean change listener" />
     <MESSAGE value="mode 2" />
     <MESSAGE value="added fade out" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fade out" />
+    <MESSAGE value="added fade out in red" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fade out in red" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java</url>
-          <line>87</line>
+          <line>91</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
