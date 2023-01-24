@@ -6,6 +6,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
@@ -14,19 +15,19 @@ import java.util.ResourceBundle;
 
 public class RandomColorController implements Initializable {
 
-    public Button btnChangeBoolean;
-    private SimpleBooleanProperty simpleBooleanProperty = new SimpleBooleanProperty();
     private final Random random = new Random();
+    public Button btnChangeBoolean;
     public Button btnChangeBackground;
-
     public AnchorPane rootPane;
+    public TextField txt1SimpleBooleanValue;
+    private SimpleBooleanProperty simpleBooleanProperty = new SimpleBooleanProperty();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         simpleBooleanProperty.addListener(new ChangeListener<>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-               changeColor();
+                changeColor();
             }
         });
 
@@ -47,13 +48,17 @@ public class RandomColorController implements Initializable {
         System.out.println("[---------------^^^^^^----------------]");
     }
 
-    private void setSimpleBooleanProperty()
-    {
+
+    @FXML
+    private void setSimpleBooleanProperty() {
 
         if (simpleBooleanProperty.getValue() == true) {
             simpleBooleanProperty.setValue(false);
-        }else if (simpleBooleanProperty.getValue()==false)
+        } else if (simpleBooleanProperty.getValue() == false) {
             simpleBooleanProperty.setValue(true);
-        System.out.println(simpleBooleanProperty.getValue().toString());
+        }
+        txt1SimpleBooleanValue.setText(simpleBooleanProperty.getValue().toString());
+
+
     }
 }

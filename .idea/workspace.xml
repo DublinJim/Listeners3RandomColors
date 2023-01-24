@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90ea897c-6b88-465f-ba58-72b0667c8303" name="Changes" comment="colours random in 256 range">
+    <list default="true" id="90ea897c-6b88-465f-ba58-72b0667c8303" name="Changes" comment="adding a listener">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/listeners3randomcolors/randomColors.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/listeners3randomcolors/randomColors.fxml" afterDir="false" />
@@ -100,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674577424858</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adding a listener">
+      <created>1674578292931</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674578292931</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,9 +126,19 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="colours random" />
     <MESSAGE value="colours random in 256 range" />
-    <option name="LAST_COMMIT_MESSAGE" value="colours random in 256 range" />
+    <MESSAGE value="adding a listener" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding a listener" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="red" />
