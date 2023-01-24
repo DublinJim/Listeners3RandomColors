@@ -1,33 +1,37 @@
 package com.example.listeners3randomcolors;
 
 import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
 
 public class RandomColorController implements Initializable {
+private final SimpleDoubleProperty  simpleDoubleProperty= new SimpleDoubleProperty();
 
     private final Random random = new Random();
     public Button btnChangeBoolean;
     public Button btnChangeBackground;
     public AnchorPane rootPane;
     public TextField txt1SimpleBooleanValue;
-    private SimpleBooleanProperty simpleBooleanProperty = new SimpleBooleanProperty();
+    public Text txtActionEvent;
+    private final SimpleBooleanProperty simpleBooleanProperty = new SimpleBooleanProperty();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        simpleBooleanProperty.addListener(new ChangeListener<>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                changeColor();
+        simpleBooleanProperty.addListener((observableValue, aBoolean, t1) -> {
+            changeColor();
+            try {
+                setActionText("Color changed");
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
             }
         });
 
@@ -52,13 +56,17 @@ public class RandomColorController implements Initializable {
     @FXML
     private void setSimpleBooleanProperty() {
 
-        if (simpleBooleanProperty.getValue() == true) {
+        if (simpleBooleanProperty.getValue()) {
             simpleBooleanProperty.setValue(false);
-        } else if (simpleBooleanProperty.getValue() == false) {
+        } else if (!simpleBooleanProperty.getValue()) {
             simpleBooleanProperty.setValue(true);
         }
         txt1SimpleBooleanValue.setText(simpleBooleanProperty.getValue().toString());
 
+    }
+
+    private void setActionText(String changeEvent) throws InterruptedException {
+        txtActionEvent.setText(changeEvent);
 
     }
 }
