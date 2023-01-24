@@ -72,6 +72,8 @@ simpleDoubleProperty.addListener((observableValue, number, t1) -> {
         int blue = random.nextInt(256);
         rootPane.setStyle("-fx-background-color: rgb(" + red + "," + green + "," + blue + ");");
 
+        txtActionEvent.setStyle("-fx-fill: red");
+
         System.out.println("[---------------Colors----------------]");
         System.out.println(" Blue is " + blue);
         System.out.println(" Red is " + red);

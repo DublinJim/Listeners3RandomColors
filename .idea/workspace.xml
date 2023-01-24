@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90ea897c-6b88-465f-ba58-72b0667c8303" name="Changes" comment="mode 2">
+    <list default="true" id="90ea897c-6b88-465f-ba58-72b0667c8303" name="Changes" comment="added fade out">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/listeners3randomcolors/randomColors.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/listeners3randomcolors/randomColors.fxml" afterDir="false" />
@@ -121,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674581379028</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added fade out">
+      <created>1674588034091</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674588034091</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,14 +150,15 @@
     <MESSAGE value="adding a listener" />
     <MESSAGE value="assigns a simpleBoolean change listener" />
     <MESSAGE value="mode 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="mode 2" />
+    <MESSAGE value="added fade out" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fade out" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java</url>
-          <line>85</line>
+          <line>87</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
