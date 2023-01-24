@@ -1,13 +1,14 @@
 package com.example.listeners3randomcolors;
 
+import javafx.animation.FadeTransition;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.Random;
@@ -15,21 +16,39 @@ import java.util.ResourceBundle;
 
 public class RandomColorController implements Initializable {
 private final SimpleDoubleProperty  simpleDoubleProperty= new SimpleDoubleProperty();
-
+    public Text txtSimpleDouble;
+    public Button btnSimpleDouble;
+    public Text txtSimpleBooleanValue;
     private final Random random = new Random();
+
+    private double dblNum=1.0;
+
     public Button btnChangeBoolean;
     public Button btnChangeBackground;
     public AnchorPane rootPane;
-    public TextField txt1SimpleBooleanValue;
+
     public Text txtActionEvent;
     private final SimpleBooleanProperty simpleBooleanProperty = new SimpleBooleanProperty();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        simpleDoubleProperty.setValue(dblNum);
+        txtSimpleBooleanValue.setText(simpleDoubleProperty.getValue().toString());
+
+
+simpleDoubleProperty.addListener((observableValue, number, t1) -> {
+    changeColor();
+
+    txtActionEvent.setText("Color changed By Double");
+    fadeOut();
+});
+
+
         simpleBooleanProperty.addListener((observableValue, aBoolean, t1) -> {
             changeColor();
             try {
-                setActionText("Color changed");
+                setActionText("Color changed by Boolean");
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -37,12 +56,20 @@ private final SimpleDoubleProperty  simpleDoubleProperty= new SimpleDoubleProper
 
     }
 
+    private void fadeOut() {
+
+        FadeTransition fadeTransition = new FadeTransition(Duration.seconds(1), txtActionEvent);
+        fadeTransition.setFromValue(1.0);
+        fadeTransition.setToValue(0.0);
+        fadeTransition.play();
+    }
+
     @FXML
     private void changeColor() {
+
         int red = random.nextInt(256);
         int green = random.nextInt(256);
         int blue = random.nextInt(256);
-
         rootPane.setStyle("-fx-background-color: rgb(" + red + "," + green + "," + blue + ");");
 
         System.out.println("[---------------Colors----------------]");
@@ -61,12 +88,21 @@ private final SimpleDoubleProperty  simpleDoubleProperty= new SimpleDoubleProper
         } else if (!simpleBooleanProperty.getValue()) {
             simpleBooleanProperty.setValue(true);
         }
-        txt1SimpleBooleanValue.setText(simpleBooleanProperty.getValue().toString());
-
+        txtSimpleBooleanValue.setText(simpleBooleanProperty.getValue().toString());
     }
 
     private void setActionText(String changeEvent) throws InterruptedException {
         txtActionEvent.setText(changeEvent);
-
+        fadeOut();
     }
+
+
+
+    @FXML
+    private void addToDouble(){
+dblNum++;
+simpleDoubleProperty.setValue(dblNum);
+txtSimpleDouble.setText(simpleDoubleProperty.getValue().toString());
+
+}
 }
