@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
@@ -36,9 +37,10 @@ public class RandomColorController implements Initializable {
 
         simpleDoubleProperty.addListener((observableValue, number, t1) -> {
             changeColor();
-
+changeTextColor();
             txtActionEvent.setText("Color changed By Double");
             fadeOut();
+
         });
 
 
@@ -70,7 +72,11 @@ public class RandomColorController implements Initializable {
         rgb.clear();
     }
 
-
+private void changeTextColor()
+{
+    Color color =rgbMaker.getColor();
+    txtSimpleDouble.setFill(color);
+}
     @FXML
     private void setSimpleBooleanProperty() {
 
