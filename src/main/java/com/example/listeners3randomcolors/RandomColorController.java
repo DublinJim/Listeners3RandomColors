@@ -12,31 +12,27 @@ import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.ResourceBundle;
 
 public class RandomColorController implements Initializable {
-    private RGBMaker rgbMaker = new RGBMaker();
-
     private final SimpleDoubleProperty simpleDoubleProperty = new SimpleDoubleProperty();
-    private final Random random = new Random();
     private final SimpleBooleanProperty simpleBooleanProperty = new SimpleBooleanProperty();
+    private final RGBMaker rgbMaker = new RGBMaker();
     public Text txtSimpleDouble;
     public Button btnSimpleDouble;
     public Text txtSimpleBooleanValue;
     public Button btnChangeBoolean;
     public Button btnChangeBackground;
     public AnchorPane rootPane;
-
     public Text txtActionEvent;
     private double dblNum = 1.0;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         simpleDoubleProperty.setValue(dblNum);
         txtSimpleBooleanValue.setText(simpleDoubleProperty.getValue().toString());
-
 
         simpleDoubleProperty.addListener((observableValue, number, t1) -> {
             changeColor();
@@ -49,7 +45,7 @@ public class RandomColorController implements Initializable {
         simpleBooleanProperty.addListener((observableValue, aBoolean, t1) -> {
             changeColor();
             try {
-                setActionText("Color changed by Boolean");
+                setActionText();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -67,23 +63,11 @@ public class RandomColorController implements Initializable {
 
     @FXML
     private void changeColor() {
-        ArrayList<Integer> rgb = new ArrayList<>();
-        int red = random.nextInt(256);
-        int green = random.nextInt(256);
-        int blue = random.nextInt(256);
 
-        rgb.add(red);
-        rgb.add(green);
-        rgb.add(blue);
+        ArrayList<Integer> rgb = rgbMaker.getRgb();
 
         rootPane.setStyle("-fx-background-color: rgb(" + rgb.get(0) + "," + rgb.get(1) + "," + rgb.get(2) + ");");
-       // txtActionEvent.setStyle("-fx-fill: rgb(" + rgb.get(0) + "," + rgb.get(1) + "," + rgb.get(2) + ");");
-
-        System.out.println("[---------------Colors----------------]");
-        System.out.println(" Blue is " + blue);
-        System.out.println(" Red is " + red);
-        System.out.println(" Green is " + green);
-        System.out.println("[---------------^^^^^^----------------]");
+        rgb.clear();
     }
 
 
@@ -98,8 +82,8 @@ public class RandomColorController implements Initializable {
         txtSimpleBooleanValue.setText(simpleBooleanProperty.getValue().toString());
     }
 
-    private void setActionText(String changeEvent) throws InterruptedException {
-        txtActionEvent.setText(changeEvent);
+    private void setActionText() throws InterruptedException {
+        txtActionEvent.setText("Color changed by Boolean");
         fadeOut();
     }
 

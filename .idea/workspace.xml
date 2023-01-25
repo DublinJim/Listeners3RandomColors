@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90ea897c-6b88-465f-ba58-72b0667c8303" name="Changes" comment="added fade out in red">
+    <list default="true" id="90ea897c-6b88-465f-ba58-72b0667c8303" name="Changes" comment="rgb maker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RGBMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RGBMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RGBMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RGBMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674588725589</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="rgb maker">
+      <created>1674593923443</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674593923443</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,14 +169,15 @@
     <MESSAGE value="mode 2" />
     <MESSAGE value="added fade out" />
     <MESSAGE value="added fade out in red" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fade out in red" />
+    <MESSAGE value="rgb maker" />
+    <option name="LAST_COMMIT_MESSAGE" value="rgb maker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/listeners3randomcolors/RandomColorController.java</url>
-          <line>93</line>
+          <line>77</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
